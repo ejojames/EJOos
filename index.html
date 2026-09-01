@@ -1,1 +1,118 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EJOos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body class="main">
+
+  <div class="topbar" id="topbar">
+    <div class="topbar-left">
+      <span class="brand">EJOos</span>
+      <span class="active-app" id="activeApp">Desktop</span>
+    </div>
+    <div class="topbar-right">
+      <span id="timeElement">Loading time...</span>
+    </div>
+  </div>
+  <div class="desktop-icons">
+    <div class="app-icon" id="welcomeopen">
+      <div class="icon-img">🖥️</div>
+      <p>Welcome</p>
+    </div>
+    <div class="app-icon" id="terminalopen">
+      <div class="icon-img">▣</div>
+      <p>Terminal</p>
+    </div>
+    <div class="app-icon" id="notesopen">
+      <div class="icon-img">✎</div>
+      <p>Notes</p>
+    </div>
+    <div class="app-icon" id="photosopen">
+      <div class="icon-img">🖼️</div>
+      <p>Photos</p>
+    </div>
+    <div class="app-icon" id="filesopen">
+      <div class="icon-img">📁</div>
+      <p>Files</p>
+    </div>
+  </div>
+
+  <div class="welcomewindow" id="welcome">
+    <div class="windowheader" id="welcomeheader">
+      <h1 class="headertext">Welcome</h1>
+      <div class="closebutton" id="welcomeclose">✖</div>
+    </div>
+    <div class="windowbody">
+      <h2>Welcome to EJOos v1.0</h2>
+      <p>EJOos is a retro-red operating system environment built with vanilla web technologies.</p>
+      <p>Features included: interactive terminal, multi-note editor, photo gallery, and file system.</p>
+    </div>
+  </div>
+
+  <div class="window" id="terminal">
+    <div class="windowheader" id="terminalheader">
+      <h1 class="headertext">EJOos Terminal</h1>
+      <div class="closebutton" id="terminalclose">✖</div>
+    </div>
+    <div class="windowbody term-body">
+      <div id="terminalOutput"></div>
+      <div class="term-input-line">
+        <span>guest@ejoos:$ </span>
+        <input type="text" id="terminalInput" autocomplete="off" spellcheck="false" />
+      </div>
+    </div>
+  </div>
+
+  <div class="window" id="notes">
+    <div class="windowheader" id="notesheader">
+      <h1 class="headertext">Notes Editor</h1>
+      <div class="closebutton" id="notesclose">✖</div>
+    </div>
+    <div class="windowbody notes-body">
+      <div class="notes-sidebar">
+        <button class="action-btn" id="newNoteBtn">+ New Note</button>
+        <div id="notesList" class="notes-list"></div>
+      </div>
+      <div class="notes-main">
+        <input type="text" id="noteTitleInput" placeholder="Note Title..." />
+        <textarea id="noteContentInput" placeholder="Write note content here..."></textarea>
+        <button class="action-btn" id="saveNoteBtn">Save Note</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bigwindow" id="photos">
+    <div class="windowheader" id="photosheader">
+      <h1 class="headertext">EJOos Photos</h1>
+      <div class="closebutton" id="photosclose">✖</div>
+    </div>
+    <div class="windowbody photos-body">
+      <div class="photos-sidebar" id="photosList"></div>
+      <div class="photos-display">
+        <img id="photoViewer" src="" alt="Selected Image" />
+        <p id="photoCaption"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="window" id="files">
+    <div class="windowheader" id="filesheader">
+      <h1 class="headertext">File System</h1>
+      <div class="closebutton" id="filesclose">✖</div>
+    </div>
+    <div class="windowbody files-body">
+      <div class="files-grid" id="filesGrid"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
