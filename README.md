@@ -1,7 +1,7 @@
 # EJOos
 
-EJOos is a web-based desktop environment designed to mimic a retro operating system layout. It runs directly inside your browser and includes a built-in suite of applications, utility tools, and arcade games.
-
+EJOos is a web-based desktop environment designed to mimic a retro operating system layout. It runs directly inside your browser and includes a built-in suite of applications, utility tools etc.
+live link : https://ej-oos.vercel.app/
 ## System Functions & Features
 
 * **Welcome Screen:** Displays a quick overview of available system functions and applications upon startup.
